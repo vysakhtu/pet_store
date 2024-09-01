@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Store</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    {% csrf_token %}
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Pet Store</a>
+            <ul class="nav-links">
+                <li><a href="/admin/">USER</a></li>
+                <li><a href="/">Products</a></li>
+                <li><a href="/">About Us</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to the Pet Store</h1>
+            <p>Your one-stop shop for all your pet needs</p>
+            <a href="/products/" class="btn">Now</a>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="products">
+        <div class="container">
+            <h2>visit our near by stores</h2>
+            <h3>new lauches</h3>
+            <h4>new offer</h4>
+            <div class="product-grid">
+                <!-- Example Product -->
+                <div class="product-card">
+                    <img src="{% static 'images/dog-food.jpg' %}" alt="Dog Food">
+                    <h3>Dog Food</h3>
+                    <p>45%off</p>
+                    <a href="#" class="btn">Buy Now</a>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pet Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
